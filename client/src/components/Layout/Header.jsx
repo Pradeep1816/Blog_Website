@@ -37,9 +37,7 @@ function Header() {
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
-            <NavLink to="/pages">Pages</NavLink>
-          </li>
+
           {isLogin && (
             <li>
               <NavLink to="/blogs">Blogs</NavLink>
@@ -85,31 +83,29 @@ function Header() {
           </button>
         </div>
         <div className="pl-5">
-          <ul className="">
+          <ul className="uppercase">
             <li className="hover:bg-stone-100 m-3 p-3">
               <NavLink to="/" onClick={() => closeIcon()}>
                 Home
               </NavLink>
             </li>
-            <li className="hover:bg-stone-100 m-3 p-3">
-              <NavLink to="/about" onClick={() => closeIcon()}>
-                pag
-              </NavLink>
-            </li>
-            <li className="hover:bg-stone-100 m-3 p-3">
-              <NavLink to="/products" onClick={() => closeIcon()}>
-                Products
-              </NavLink>
-            </li>
+
+            {isLogin && (
+              <li className="hover:bg-stone-100 m-3 p-3">
+                <NavLink to="/blogs" onClick={() => closeIcon()}>
+                  Blogs
+                </NavLink>
+              </li>
+            )}
             <li className="hover:bg-stone-100 m-3 p-3">
               <NavLink to="/contact" onClick={() => closeIcon()}>
-                Contact
+                dashboard
               </NavLink>
             </li>
 
             {!isLogin && (
               <li className="hover:bg-stone-100 m-3 p-3">
-                <NavLink className="" onClick={() => closeIcon()}>
+                <NavLink to="/login" className="" onClick={() => closeIcon()}>
                   Login
                 </NavLink>
               </li>
@@ -118,16 +114,10 @@ function Header() {
             {isLogin && (
               <li className="hover:bg-stone-100 m-3 p-3">
                 <NavLink className="" onClick={() => closeIcon()}>
-                  L
+                  Logout
                 </NavLink>
               </li>
             )}
-            <li className="hover:bg-stone-100 m-3 p-3">
-              <NavLink to="/cart" className="flex" onClick={() => closeIcon()}>
-                <BsCart style={{ fontSize: "20px" }} />
-                <sub className="top-0 ml-1">0</sub>
-              </NavLink>
-            </li>
           </ul>
         </div>
       </div>

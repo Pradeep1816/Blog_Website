@@ -24,8 +24,8 @@ function UserLogin() {
         formData
       );
       if (res.data.success) {
-        navigate("/");
         localStorage.setItem("user", JSON.stringify(res.data));
+        navigate("/");
       }
       setError(res.data.message);
       setFormData({
