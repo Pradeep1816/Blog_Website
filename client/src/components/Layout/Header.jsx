@@ -38,11 +38,10 @@ function Header() {
             <NavLink to="/">Home</NavLink>
           </li>
 
-          {isLogin && (
-            <li>
-              <NavLink to="/blogs">Blogs</NavLink>
-            </li>
-          )}
+          <li>
+            <NavLink to="/blogs">Blogs</NavLink>
+          </li>
+
           <li>
             <NavLink to="/adminLogin">Dashboard</NavLink>
           </li>
@@ -90,13 +89,12 @@ function Header() {
               </NavLink>
             </li>
 
-            {isLogin && (
-              <li className="hover:bg-stone-100 m-3 p-3">
-                <NavLink to="/blogs" onClick={() => closeIcon()}>
-                  Blogs
-                </NavLink>
-              </li>
-            )}
+            <li className="hover:bg-stone-100 m-3 p-3">
+              <NavLink to="/blogs" onClick={() => closeIcon()}>
+                Blogs
+              </NavLink>
+            </li>
+
             <li className="hover:bg-stone-100 m-3 p-3">
               <NavLink to="/contact" onClick={() => closeIcon()}>
                 dashboard
