@@ -96,7 +96,7 @@ function Header() {
             </li>
 
             <li className="hover:bg-stone-100 m-3 p-3">
-              <NavLink to="/contact" onClick={() => closeIcon()}>
+              <NavLink to="/adminLogin" onClick={() => closeIcon()}>
                 dashboard
               </NavLink>
             </li>
